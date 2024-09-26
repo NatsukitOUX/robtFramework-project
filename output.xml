@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-09-26T21:41:22.638262" rpa="false" schemaversion="5">
+<suite id="s1" name="SoftwareTesting-project" source="c:\Users\ilias\OneDrive - Hämeen ammattikorkeakoulu\Software_testing_Project _work\robtFramework-project\SoftwareTesting-project.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-09-26T21:41:22.888561" level="INFO">Opening browser 'chrome' to base url 'http://jimms.fi'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-26T21:41:22.888561" elapsed="3.062441"/>
+</kw>
+<test id="s1-t1" name="TC_03_Check_Add_To_Cart_Link_And_Icon" line="40">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-09-26T21:41:25.953194" level="INFO">Opening url 'https://www.jimms.fi/fi/Product/Search?q=ps5'</msg>
+<arg>https://www.jimms.fi/fi/Product/Search?q=ps5</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-09-26T21:41:25.952190" elapsed="0.515801"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${ADD_TO_CART_LINK}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-26T21:41:26.468500" elapsed="0.019907"/>
+</kw>
+<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
+<msg time="2024-09-26T21:41:26.628379" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="add_to_cart_icon.png"&gt;&lt;img src="add_to_cart_icon.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>${ADD_TO_CART_ICON}</arg>
+<arg>add_to_cart_icon.png</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="PASS" start="2024-09-26T21:41:26.488407" elapsed="0.139972"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-26T21:41:26.628379" level="INFO">Clicking element 'xpath=//*[@id="productsearchpage"]/div[2]/div[5]/div/div[1]/product-box/div[2]/div[3]/addto-cart-wrapper/div/a'.</msg>
+<arg>${ADD_TO_CART_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-26T21:41:26.628379" elapsed="0.097320"/>
+</kw>
+<doc>Check if 'Lisää koriin' link and icon exist on the product page.</doc>
+<tag>AddToCart</tag>
+<status status="PASS" start="2024-09-26T21:41:25.951002" elapsed="0.775695"/>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-09-26T21:41:26.728329" elapsed="6.184222"/>
+</kw>
+<status status="PASS" start="2024-09-26T21:41:22.638262" elapsed="10.274289"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">AddToCart</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="SoftwareTesting-project">SoftwareTesting-project</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
